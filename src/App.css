@@ -23,6 +23,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.bold{
+  font-weight: bold;
+}
+.listItem{
+  margin: 20px 0;
+}
 
 .App-link {
   color: #61dafb;

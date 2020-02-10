@@ -1,24 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Board from "./Board";
+import WrapperList from "./WrapperList";
+import { appendNewItem } from "./utils";
+import AssignUser from "./AssignUser";
 
 function App() {
+  const LabelItem = (listItem) => <div key={listItem.text}>{listItem.text}</div>;
+  const Label = WrapperList("Label Item", LabelItem, "Labels");
+  const ListItem = WrapperList("List Item", Label, "ListItems", <AssignUser />);
+  const List = WrapperList("List", ListItem, "Lists");
+  const Board = WrapperList("Board", List, "Boards");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Board />
     </div>
   );
 }
