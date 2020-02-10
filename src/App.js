@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Board from "./Board";
 import WrapperList from "./WrapperList";
 import { appendNewItem } from "./utils";
 import AssignUser from "./AssignUser";
